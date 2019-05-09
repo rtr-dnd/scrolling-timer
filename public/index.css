@@ -10,10 +10,10 @@ h1{
     margin: 0 auto;
     width: 100%;
     text-align: center;
-    height: 100vh;
+    height: 80vh;
     height: calc(var(--vh, 1vh) * 100);
     line-height: 100vh;
-    line-height: calc(var(--vh, 1vh) * 100);
+    line-height: calc(var(--vh, 1vh) * 90);
     vertical-align: middle;
     opacity: 0.9;
 }

@@ -13,7 +13,7 @@ h1{
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
     line-height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    line-height: calc(var(--vh, 1vh) * 100);
     vertical-align: middle;
     opacity: 0.9;
 }

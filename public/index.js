@@ -11,35 +11,45 @@ window.onload = function () {
     var scrollUnit = 0;
     wrap = document.querySelector('.wrap');
 
+    notifySound = function () {
+        audioElem = new Audio();
+        audioElem.src = "material_notification.wav";
+        audioElem.play();
+    }
+
     document.querySelector('.wrap').onscroll = function () {
         if (isStarted) {
 
             rate = (this.scrollTop / maxScrollValue) * 3600;
-            var color = 'hsl('+rate*5+', 90%,'+((1-rate/3600)*100-20)+'%)';
+            //var color = 'hsl('+rate*5+', 50%,'+((1-rate/3600)*100-20)+'%)';
 
             // 背景色を変更
-            document.body.style.backgroundColor = color;
+            //document.body.style.backgroundColor = color;
+            document.querySelector('.status').innerText = "Tap or click to stop";
 
         } else {
+            document.querySelector('.status').innerText = "Tap or click to start";
             // スクロール最大値を計算
             maxScrollValue = this.scrollHeight - this.offsetHeight;
             // 0 ~ 3600(60分) に変換
             rate = (this.scrollTop / maxScrollValue) * 3600;
             roundedSeconds = Math.round(rate / 10) * 10;
             display.innerText = roundedSeconds;
-            var color = 'hsl('+rate*5+', 90%,'+((1-rate/3600)*100-20)+'%)';
+            //var color = 'hsl('+rate*5+', 50%,'+((1-rate/3600)*100-20)+'%)';
 
             // 背景色を変更
-            document.body.style.backgroundColor = color;
+            //document.body.style.backgroundColor = color;
         }
     };
 
     tickSecond = function () {
         if (roundedSeconds == 0) {
             seconds = 0;
+            notifySound();
             clearInterval(tsInstance);
             clearInterval(tscrInstance);
             isStarted = false;
+            document.querySelector('.status').innerText = "Scroll";
         } else {
             roundedSeconds -= 1;
             display.innerText = roundedSeconds;
@@ -49,13 +59,10 @@ window.onload = function () {
     tickScroll = function () {
         seconds -= 0.1;
         wrap.scroll(0, scrollUnit * seconds);
-        console.log("scrolling");
     }
 
     pad.onclick = function () {
-        console.log('clicked');
         isStarted = !isStarted;
-        console.log(isStarted);
         if (isStarted) {
             tsInstance = setInterval(tickSecond, 1000);
             seconds = roundedSeconds;

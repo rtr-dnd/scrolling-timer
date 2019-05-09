@@ -13,6 +13,21 @@ h1{
     height: 100vh;
     line-height: 100vh;
     vertical-align: middle;
+    opacity: 0.9;
+}
+
+.status{
+    display: inline-block;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    bottom: 15vh;
+    opacity: 0.4;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 200;
+
 }
 
 .wrap{

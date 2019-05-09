@@ -1,0 +1,31 @@
+body{
+    margin: 0 auto;
+}
+
+h1{
+    display: inline-block;
+    font-size: 64px;
+    font-weight: 200;
+    font-family: "Roboto";
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+    line-height: 100vh;
+    vertical-align: middle;
+}
+
+.wrap{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    overflow: auto;
+}
+
+#pad{
+    height: 30000px;
+}

@@ -1,6 +1,9 @@
 body{
     margin: 0 auto;
 }
+#debug{
+    position: absolute;
+}
 
 h1{
     position: absolute;
@@ -14,19 +17,20 @@ h1{
     font-weight: 200;
     font-family: "Roboto";
     text-align: center;
-    /*height: 100vh;
+    height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
     line-height: 100vh;
-    line-height: calc(var(--vh, 1vh) * 100);*/
+    line-height: calc(var(--vh, 1vh) * 100);
     vertical-align: middle;
     opacity: 0.9;
 }
-h1:before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+@media (max-width:767px) {
+    h1{
+        height: 85vh;
+        line-height: 85vh;
+    }
 }
+
 
 .status{
     display: inline-block;

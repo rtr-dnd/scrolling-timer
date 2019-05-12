@@ -30,10 +30,10 @@ window.onload = function () {
 
             // 背景色を変更
             //document.body.style.backgroundColor = color;
-            document.querySelector('.status').innerText = "Tap or click to stop";
+            document.querySelector('.status').innerText = "タップしてストップ";
 
         } else {
-            document.querySelector('.status').innerText = "Tap or click to start";
+            document.querySelector('.status').innerText = "タップしてスタート";
             // スクロール最大値を計算
             maxScrollValue = this.scrollHeight - this.offsetHeight;
             // 0 ~ 3600(60分) に変換

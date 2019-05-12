@@ -39,7 +39,7 @@ window.onload = function () {
             // 0 ~ 3600(60分) に変換
             rate = (this.scrollTop / maxScrollValue) * 3600;
             roundedSeconds = Math.round(rate / 10) * 10;
-            display.innerText = roundedSeconds;
+            display.innerHTML = roundedSeconds + "<span class='sec'> sec </span>";
             //var color = 'hsl('+rate*5+', 50%,'+((1-rate/3600)*100-20)+'%)';
 
             // 背景色を変更
@@ -57,7 +57,7 @@ window.onload = function () {
             document.querySelector('.status').innerText = "Scroll";
         } else {
             roundedSeconds -= 1;
-            display.innerText = roundedSeconds;
+            display.innerHTML = roundedSeconds + "<span class='sec'> sec </span>";
         }
     }
 

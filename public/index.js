@@ -54,7 +54,7 @@ window.onload = function () {
             clearInterval(tsInstance);
             clearInterval(tscrInstance);
             isStarted = false;
-            document.querySelector('.status').innerText = "Scroll";
+            document.querySelector('.status').innerHTML = '<img src="material_arrow_down.svg" alt="scroll down">';
         } else {
             roundedSeconds -= 1;
             display.innerHTML = roundedSeconds + "<span class='sec'> sec </span>";

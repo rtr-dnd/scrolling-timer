@@ -76,6 +76,7 @@ window.onload = function () {
         } else {
             clearInterval(tsInstance);
             clearInterval(tscrInstance);
+            document.querySelector('.status').innerText = "タップしてスタート";
         }
     };
 };
